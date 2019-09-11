@@ -66,6 +66,10 @@ body{
 
 }
 
+.navbar-inverse .navbar-nav>li>a:hover{
+    font-weight: bold;
+}
+
 /*header*/
 .header{
 	
@@ -269,7 +273,7 @@ body{
   .team .card{
     width: 80%;
     margin: 52px 10% 52px;
-    padding: 40px 0px 40px;
+    padding: 2px 2px 40px;
   }
 }
 .team .card h2{
@@ -375,10 +379,10 @@ textarea.form-control{
 }
 
 .checkout .container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+    background-color: #ffffff;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid #d3d3d359;
+    border-radius: 3px;
 }
 
 .checkout input[type=text] {
@@ -401,7 +405,7 @@ textarea.form-control{
 }
 
 .checkout .btn {
-  background-color: #4CAF50;
+  background-color: #989271;
   color: white;
   padding: 12px;
   margin: 10px 0;
@@ -413,7 +417,7 @@ textarea.form-control{
 }
 
 .checkout .btn:hover {
-  background-color: #45a049;
+  background-color: #000000;
 }
 
 .checkout span.price {
@@ -432,6 +436,94 @@ textarea.form-control{
 }
 
 
+
+/*scroll top*/
+.scroll-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    z-index: 9;
+}
+.scroll-top i {
+    color: #fff;
+    font-size: 48px;
+}
+
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+/*the animation definition*/
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 80px, 0);
+        transform: translate3d(0, 80px, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 80px, 0);
+        -ms-transform: translate3d(0, 80px, 0);
+        transform: translate3d(0, 80px, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp
+}
+
+/*Parallax Move*/
+.parallax-move{
+    overflow: hidden;
+}
+.parallax-move img {
+  position: relative;
+  z-index: 4;
+  max-width: 100%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: opacity 0.3s ease-out, -webkit-transform 0.2s ease-out;
+  -moz-transition: opacity 0.3s ease-out, -moz-transform 0.2s ease-out;
+  -o-transition: opacity 0.3s ease-out, -o-transform 0.2s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.2s ease-out;
+}
+
+
 /*START FOOTER*/
 .footer{
   background-color: #000000;
@@ -446,3 +538,6 @@ textarea.form-control{
 .footer a{
   color: #b4a892;
 }
+
+
+
